@@ -65,7 +65,7 @@ export default function Home() {
       <div className="h-[80vh] place-content-center">
 
         <div className="font-bold text-5xl mb-5 italic text-white">
-          Suresh Kumar
+          Suresh Kumar M
         </div>
 
         <div className="text-sm text-white">
