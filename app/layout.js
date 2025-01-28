@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           
           {/* <Navbar /> */}
 
-          <div className={`flex text-white justify-between mx-5`}>
+          <div className={`hidden sm:flex text-white justify-between mx-5`}>
             <div className="basis-1/3"></div>
             <div className="basis-1/3 flex justify-between my-5 text-sm">
               <p className={`cursor-pointer ${path=="/" ? `font-bold text-yellow-500` : ``}`} onClick={()=>router.push('/')}>Home</p>
@@ -48,13 +48,13 @@ export default function RootLayout({ children }) {
 
         </div>
 
-        <div className="h-[86vh]">
+        <div className="sm:h-[86vh]">
           {children}
         </div>
 
         <div>
 
-          <div className={`h-[4vh] flex place-content-center ${path!="/" && `bg-black bg-opacity-80`}`}>
+          <div className={`sm:h-[4vh] flex place-content-center ${path!="/" && `bg-black bg-opacity-80`}`}>
 
             <p className="text-white text-xs">@ Suresh Kumar M, 2025</p>
 

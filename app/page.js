@@ -75,7 +75,7 @@ export default function Home() {
         </div>
 
         <div className="m-5">
-          <button className="rounded-full px-5 bg-white py-2" onClick={()=>router.push("/about")}>Know more ⮞</button>
+          <button className="rounded-full px-5 bg-white py-2" onClick={()=>router.push("/about")}>See more ⮞</button>
         </div>
 
       </div>      

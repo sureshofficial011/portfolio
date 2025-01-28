@@ -55,22 +55,22 @@ export default function Home() {
       
       {/* <Image src={`/intro.jpg`} width={100} height={100}/> */}
 
-      <div className="h-[86vh] bg-black bg-opacity-80 p-5">
+      <div className="sm:h-[86vh] bg-black bg-opacity-80 p-5">
 
         {/* <div className="font-bold text-5xl mb-5 italic text-white">
           {tabName}
         </div> */}
 
-        <div className="flex font-bold mb-5 italic text-white text-center cursor-pointer place-content-center">
+        <div className="block sm:flex font-bold mb-5 italic text-white text-center cursor-pointer place-content-center">
           <p className={`m-5 rounded-full px-5 ${tabName=="Profile" ? `bg-white text-black` : `border-2 border-white text-white`}`} onClick={()=>{setTabName("Profile")}}>Profile</p>
           <p className={`m-5 rounded-full px-5 ${tabName=="Education" ? `bg-white text-black` : `border-2 border-white text-white`}`} onClick={()=>{setTabName("Education")}}>Education</p>
           <p className={`m-5 rounded-full px-5 ${tabName=="Skills" ? `bg-white text-black` : `border-2 border-white text-white`}`} onClick={()=>{setTabName("Skills")}}>Skills</p>
           <p className={`m-5 rounded-full px-5 ${tabName=="Experience" ? `bg-white text-black` : `border-2 border-white text-white`}`} onClick={()=>{setTabName("Experience")}}>Experience</p>
         </div>
 
-        {tabName=="Profile" && <div className="flex">
+        {tabName=="Profile" && <div className="block sm:flex">
           <div className="basis-1/2 text-white bg-gray-500 bg-opacity-50 rounded-2xl m-5 p-5">
-            <div className="flex">
+            <div className={`block sm:flex`}>
               <div className="basis-1/3 text-2xl font-bold italic">
                 <Image src="/photo.jpg" className="border-2 rounded-2xl border-white" width={200} height={250} />
               </div>
@@ -101,12 +101,12 @@ export default function Home() {
                 <p className="text-lg font-bold italic mb-3">Interests :</p>
                 <div className="flex">
                   <div className="basis-1/2">
-                    <p className="text-lg font-bold italic text-sm">● Web 3.0 <span className="text-xs">(Fluent)</span></p>
-                    <p className="text-lg font-bold italic text-sm">● Artificial Intelligence <span className="text-xs">(Native)</span></p>
+                    <p className="text-lg font-bold italic text-sm">● Web 3.0</p>
+                    <p className="text-lg font-bold italic text-sm">● Artificial Intelligence</p>
                   </div>
                   <div className="basis-1/2">
-                    <p className="text-lg font-bold italic text-sm">● Blockchain <span className="text-xs">(Fluent)</span></p>
-                    <p className="text-lg font-bold italic text-sm">● Fintech <span className="text-xs">(Native)</span></p>
+                    <p className="text-lg font-bold italic text-sm">● Blockchain</p>
+                    <p className="text-lg font-bold italic text-sm">● Fintech</p>
                   </div>
                 </div>                  
               </div>
@@ -114,7 +114,7 @@ export default function Home() {
           </div>
         </div>}
 
-        {tabName=="Education" && <div className="flex">
+        {tabName=="Education" && <div className="sm:flex">
           <div className="basis-1/2 text-white">
             <div className="bg-gray-500 bg-opacity-50 rounded-2xl m-5 p-5">
               <p className="text-2xl font-bold italic">Education</p>
@@ -177,10 +177,10 @@ export default function Home() {
           </div>
         </div>}
 
-        {tabName=="Skills" && <div className="flex">
+        {tabName=="Skills" && <div className="sm:flex">
           <div className="basis-2/6 bg-gray-500 rounded-2xl m-5 p-5 bg-opacity-50">
             <p className="text-2xl text-white font-bold mb-5">Graphics Desginer</p>
-            <div className="flex place-content-between m-5">
+            <div className="sm:flex place-content-between m-5">
               <div className="basis-1/3">
                 <Image width={100} height={100} className="border-2 border-white mb-2"/>
                 <p className="font-bold text-white">Adobe Photoshop</p>
@@ -197,7 +197,7 @@ export default function Home() {
                 <p className="text-white">15+ yrs</p>
               </div>                   
             </div>
-            <div className="flex m-5">
+            <div className="sm:flex m-5">
               <div className="basis-1/3">
                 <Image width={100} height={100} className="border-2 border-white mb-2"/>
                 <p className="font-bold text-white">Figma</p>
@@ -212,7 +212,7 @@ export default function Home() {
           </div>
           <div className="basis-4/6 bg-gray-500 rounded-2xl m-5 p-5 bg-opacity-50">
             <p className="text-2xl text-white font-bold mb-5">Software Engineer</p>
-            <div className="flex place-content-between m-5 text-white">
+            <div className="sm:flex place-content-between m-5 text-white">
               <div className="basis-1/8">
                 <Image width={100} height={100} className="border-2 border-white mb-2"/>
                 <p className="font-bold">HTML</p>
@@ -254,7 +254,7 @@ export default function Home() {
                 <p>15+ yrs</p>
               </div> 
             </div>
-            <div className="flex place-content-between m-5 text-white">
+            <div className="sm:flex place-content-between m-5 text-white">
               <div className="basis-1/8">
                 <Image width={100} height={100} className="border-2 border-white mb-2"/>
                 <p className="font-bold">Tailwind CSS</p>
@@ -346,7 +346,7 @@ export default function Home() {
           <div className=" text-white">
             <div className="bg-gray-500 bg-opacity-50 rounded-2xl m-5 p-5">
               {/* <p className="text-2xl font-bold italic">Experience</p> */}
-              <div className="flex">
+              <div className="sm:flex">
                 <div className="basis-1/3 m-5 bg-white text-black rounded-2xl bg-opacity-50 p-5">
                   <div className="flex">
                     <div className="basis-1/4">
