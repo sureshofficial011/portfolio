@@ -75,7 +75,7 @@ export default function Home() {
                 <Image src="/photo.jpg" className="border-2 rounded-2xl border-white" width={200} height={250} />
               </div>
               <div className=" basis-2/3 italic text-start">
-                <p className="text-4xl font-bold">Suresh kumar M</p>
+                <p className="text-4xl font-bold mt-3 sm:text-4xl font-bold">Suresh kumar M</p>
                 <p className="text-sm mb-3">Software engineer</p>
                 <p>{" "}</p>
                 <p>Age: 24</p>
@@ -120,7 +120,7 @@ export default function Home() {
               <p className="text-2xl font-bold italic">Education</p>
               <div className="">
                 <div className="m-5 bg-white text-black rounded-2xl bg-opacity-50 p-5">
-                  <div className="flex">
+                  <div className="sm:flex">
                     <div className="basis-1/4">
                       <Image src="https://dial4college.blr1.cdn.digitaloceanspaces.com/pro/1095/logo/1699432925.png" width={50} height={50} />
                     </div>
@@ -132,7 +132,7 @@ export default function Home() {
                   </div>                  
                 </div>
                 <div className="m-5 bg-white text-black rounded-2xl bg-opacity-50 p-5">
-                  <div className="flex">
+                  <div className="sm:flex">
                     <div className="basis-1/4">
                       <Image width={50} height={50} />
                     </div>
@@ -151,7 +151,7 @@ export default function Home() {
               <p className="text-2xl font-bold italic">Courses & Training</p>
               <div className="">
                 <div className="m-5 bg-white text-black rounded-2xl bg-opacity-50 p-5">
-                  <div className="flex">
+                  <div className="sm:flex">
                     <div className="basis-1/4">
                       <Image width={50} height={50} />
                     </div>
@@ -162,7 +162,7 @@ export default function Home() {
                   </div>                  
                 </div>
                 <div className="m-5 bg-white text-black rounded-2xl bg-opacity-50 p-5">
-                  <div className="flex">
+                  <div className="sm:flex">
                     <div className="basis-1/4">
                       <Image width={50} height={50} />
                     </div>
@@ -348,7 +348,7 @@ export default function Home() {
               {/* <p className="text-2xl font-bold italic">Experience</p> */}
               <div className="sm:flex">
                 <div className="basis-1/3 m-5 bg-white text-black rounded-2xl bg-opacity-50 p-5">
-                  <div className="flex">
+                  <div className="sm:flex">
                     <div className="basis-1/4">
                       <Image width={50} height={50} />
                     </div>
@@ -365,7 +365,7 @@ export default function Home() {
                   </div>                  
                 </div>
                 <div className="basis-1/3 m-5 bg-white text-black rounded-2xl bg-opacity-50 p-5">
-                  <div className="flex">
+                  <div className="sm:flex">
                     <div className="basis-1/4">
                       <Image width={50} height={50} />
                     </div>
@@ -384,7 +384,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="basis-1/3 m-5 bg-white text-black rounded-2xl bg-opacity-50 p-5">
-                  <div className="flex">
+                  <div className="sm:flex">
                     <div className="basis-1/4">
                       <Image width={50} height={50} />
                     </div>
