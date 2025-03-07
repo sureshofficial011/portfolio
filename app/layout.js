@@ -29,37 +29,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} h-[100vh] w-[100vw] antialiased backdrop-blu backdrop-brightness-50`}>
-        <div className={`text-center h-[10vh] ${path!="/" && `bg-black bg-opacity-80`}`}>
-          
-          {/* <Navbar /> */}
+        
+        {/* <Navbar /> */}
 
+        {/* <div className={`text-center h-[10vh] bg-black`}>
+          
           <div className={`hidden sm:flex text-white justify-between mx-5`}>
             <div className="basis-1/3"></div>
-            <div className="basis-1/3 flex justify-between my-5 text-sm">
+            <div className="basis-1/3 justify-between my-5 text-sm">
               <p className={`cursor-pointer ${path=="/" ? `font-bold text-yellow-500` : ``}`} onClick={()=>router.push('/')}>Home</p>
-              <p className={`cursor-pointer ${path=="/about" ? `font-bold text-yellow-500` : ``}`} onClick={()=>router.push('/about')}>About</p>
-              {/* <p className={`cursor-pointer ${path=="/services" ? `font-bold text-yellow-500` : ``}`} onClick={()=>router.push('/services')}>Services</p> */}
-              {/* <p className={`cursor-pointer ${path=="/portfolio" ? `font-bold text-yellow-500` : ``}`} onClick={()=>router.push('/portfolio')}>Portfolio</p> */}
-              {/* <p className={`cursor-pointer ${path=="/pricing" ? `font-bold text-yellow-500` : ``}`} onClick={()=>router.push('/pricing')}>Pricing</p> */}
-              <p className={`cursor-pointer ${path=="/contact" ? `font-bold text-yellow-500` : ``}`} onClick={()=>router.push('/contact')}>Contact</p>
             </div>
             <div className="basis-1/3"></div>            
           </div>
 
-        </div>
+        </div> */}
 
         <div className="sm:h-[86vh]">
           {children}
-        </div>
-
-        <div>
-
-          <div className={`sm:h-[4vh] flex place-content-center ${path!="/" && `bg-black bg-opacity-80`}`}>
-
-            <p className="text-white text-xs">@ Suresh Kumar M, 2025</p>
-
-          </div>
-
         </div>
 
       </body>
