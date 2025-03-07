@@ -40,17 +40,17 @@ export default function Home() {
           <div className="basis-1/2 place-content-center">
 
             <div className=" mb-5 text-white flex">
-              <p className="basis-1/4"></p>
-              <div className="basis-2/4 text-start">
-                <p className="text-white text-2xl font-bold">Hey, I'm</p>
-                <p className="text-yellow-300 text-7xl font-black">Suresh Kumar M</p>
-                <div className="text-lg text-white py-5">
+              <p className="basis-1/5"></p>
+              <div className="basis-4/5 text-start">
+                <p className="text-white text-2xl font-bold">Hi, I'm</p>
+                <p className="text-yellow-300 text-8xl font-black">Suresh Kumar M</p>
+                <div className="text-white py-5 font-bold text-2xl">
                   <span className="me-2">SOFTWARE</span>
                   <span className="me-2">ENGINEER</span>
                   {/* <span>DEVELOPER</span> */}
                 </div>
                 <div className="mt-5 pt-5">
-                  <button className="rounded-full px-5 bg-white text-black py-2" onClick={()=>router.push("/")}>See more ⮞</button>
+                  <button className="rounded-full px-5 bg-white text-black py-2" onClick={()=>{console.log(' ', document.getElementById('profile')?.scrollIntoView()); document.getElementById('profile')?.focus()}}>See more ▼</button>
                 </div>
                 {/* <div className="mt-5 pt-5">
                   <div className="mt-5 pt-5">
@@ -63,7 +63,7 @@ export default function Home() {
                   </div>
                 </div> */}
               </div>
-              <p className="basis-1/4"></p>
+              {/* <p className="basis-1/5"></p> */}
             </div>
 
           </div>
@@ -74,8 +74,8 @@ export default function Home() {
 
               <div className="sm:basis-1/3 sm:h-[100vh]"></div>
               
-              <div className="sm:basis-1/3 bg-yellow-300 h-[100vh] place-content-center">
-                <Image src="/Photo.jpg" width={400} height={400} className="text-center items-center"/>
+              <div className="sm:basis-1/3 bg-yellow-300 h-[100vh] place-content-center border-8 border-blue-700">
+                <Image src="/Photo.jpg" width={400} height={400} className="text-center items-center border-8 border-blue-700"/>
               </div>
 
               <div className="sm:basis-1/3 bg-yellow-300"></div>
@@ -90,7 +90,7 @@ export default function Home() {
 
       {/* Profile */}
 
-      <div className="px-5 mx-5 snap-center snap-always sm:h-[100vh] sm:flex ">
+      <div className="px-5 mx-5 snap-center snap-always sm:h-[100vh] sm:flex " id="profile">
         <div className="sm:basis-1/2">
           <div className="text-5xl font-black p-5 m-5 text-left text-blue-700">About Me</div>
           <p className="text-xl italic text-sm mx-5 px-5 text-left">Software engineer with 3 years experience working predominantly with corporates and startups, gaining extensive knowledge and expertise in various technologies, including React and Node js. Passionate about tackling new challenges, I thrive on learning and implementing innovative & logical solutions. Known for my quick adaptability to new technologies and tasks, I consistently strive to deliver high-quality results.</p>
@@ -156,6 +156,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+                  {/* <p className="text-blue-700 text-end px-5 text-sm">My other educations</p> */}
                 </div>
                 <div className="basis-1/2 place-content-center">
                   <p className="text-4xl font-black text-black text-blue-700">Courses & Training</p>
@@ -339,7 +340,7 @@ export default function Home() {
       <div className="sm:h-[100vh]">
         <p className="text-6xl font-black p-5 text-blue-700">Experience</p>
         <div className=" text-white">
-          <div className="rounded-2xl m-5 p-5">
+          <div className="rounded-2xl mx-5 px-5">
             {/* <p className="text-2xl font-bold italic">Experience</p> */}
             <div className="sm:flex">
               <div className="basis-1/3 m-5 bg-yellow-300 text-black rounded-2xl p-5">
@@ -348,14 +349,24 @@ export default function Home() {
                     <Image width={50} height={50} src={`https://static.wixstatic.com/media/a5ec0c_019715cab1ef4b35b5206dd13322d324~mv2.png/v1/fill/w_2500,h_895,al_c/a5ec0c_019715cab1ef4b35b5206dd13322d324~mv2.png`}/>
                   </div>
                   <div className="basis-3/4 text-start">
-                    <p className="italic text-xs">2019-2020</p>
+                    <p className="italic text-xs font-bold">2019-2020</p>
                     <p className="font-black text-2xl">Freelancer</p>
                     <p className="text-md">Markfly ventures</p>
                     <p className="italic text-xs">Coimbatore, Tamil Nadu</p>
-                    <p className="mt-5 mb-2">Achievements :</p>
-                    <p className="text-sm">1) Book formatting and cover design for 5 prestigious books</p>
-                    <p className="text-sm">2) Awarded with Coimbatore Literary Award for the Best Book cover designer</p>
-                    <p className="text-sm">3) Kalpaviruksha website developed and launched</p>
+                    <p className="pt-5 text-sm">My first internship and Freelance company where my role was crucial offering Graphics, Web designs, book formatting and web development services. </p>
+                    <p className="mt-5 mb-2 font-bold">Achievements :</p>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="basis-5/6 text-sm p-2">Book formatting and cover design for 5 prestigious books</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="basis-5/6 text-sm p-2">Coimbatore Literary Award for the Best Book cover designer</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">Kalpaviruksha website developed and launched</p>
+                    </div>
                   </div>
                 </div>                  
               </div>
@@ -365,16 +376,31 @@ export default function Home() {
                     <Image width={50} height={50} src="https://projectdevs.web.app/logo.png" />
                   </div>
                   <div className="basis-3/4 text-start">
-                    <p className="italic text-xs">2020-2022</p>
+                    <p className="italic text-xs font-bold">2020-2022</p>
                     <p className="font-black text-2xl">Co-Founder</p>
                     <p>Project Devs</p>
                     <p className="italic text-xs">Coimbatore, Tamil Nadu</p>
-                    <p className="mt-5 mb-2">Achievements :</p>
-                    <p className="text-sm">1) Built and Sold 50+ unique projects to college students</p>
-                    <p className="text-sm">2) MrDood trading platform built and launched</p>
-                    <p className="text-sm">3) AirConnect drone website built and sold to customer</p>
-                    <p className="text-sm">4) I9 Options is a USA based Option trading platform built for TechOreo, Cyber-Security and hosting Company</p>
-                    <p className="text-sm">5) Digital marketing for Numeric Gamers, an online video gaming content provider available in all Social platforms including Youtube, Blogger, Instagram</p>
+                    <p className="mt-5 mb-2 font-bold">Achievements :</p>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">Built and Sold 50+ unique projects to college students</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">MrDood trading platform built and launched</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">AirConnect drone website built and sold to customer</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">I9 Options is a USA based Option trading platform built for TechOreo, Cyber-Security & hosting Company</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">Digital marketing for Numeric Gamers, an online video gaming content provider available in Youtube, Blogger, Instagram</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -384,20 +410,111 @@ export default function Home() {
                     <Image width={50} height={50} src="https://media.licdn.com/dms/image/v2/D560BAQFq-rO6qwiCCQ/company-logo_200_200/company-logo_200_200/0/1709300361982/span_technology_services_logo?e=2147483647&v=beta&t=uQtD4JiCJqhNdxTsR1Rv5fvORoRJ01fKp2MFqwbX9Fw" />
                   </div>
                   <div className="basis-3/4 text-start">
-                    <p className="italic text-xs">2022-2024</p>
+                    <p className="italic text-xs font-bold">2022-2024</p>
                     <p className="font-black text-2xl">Software Engineer</p>
                     <p>SPAN Technology Services Pvt. Ltd.</p>
                     <p className="italic text-xs">Coimbatore, Tamil Nadu</p>
-                    <p className="mt-5 mb-2">Achievements :</p>
-                    <p className="text-sm">1) Awarded with ‘Shining Star’ for Developing and enhancing SPAN Project Management SAAS product single handed</p>
-                    <p className="text-sm">2) Awarded with ‘Spot Award’ for implementing the AWS services in production server within a day</p>
-                    <p className="text-sm">3) Awarded with ‘Best team of the month’ for the TaxBandits BOIR product</p>
-                    <p className="text-sm">4) Recognition for completing the MERN stack training within a month</p>
+                    <p className="mt-5 mb-2 font-bold">Achievements :</p>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">‘Shining Star’ award for Developing and enhancing SPAN Project Management SAAS product - Solo</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">Awarded with ‘Spot Award’ for implementing the AWS services in production server within a day</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">Awarded with ‘Best team of the month’ for the TaxBandits BOIR product</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">Awarded with ‘Super Star’ for handling Github complexities</p>
+                    </div>
+                    <div className="bg-blue-700 rounded-lg text-white flex my-2">
+                      <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
+                      <p className="text-sm p-2">Recognition for completing the MERN stack training within a month</p>
+                    </div>
                     {/* <p className="text-sm">5) Recognition for developing ‘SPAN Foods’ application which was used within the organzation for ordering food from the company’s kitchen for the employees</p> */}
                     {/* <p className="text-sm">6) Recognition for developing FORM W9, W9-BEN from scratch and integration of third-party tax filing services for TAX BANDITS</p> */}
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* My projects */}
+
+      <div className="sm:h-[100vh] bg-blue-700">
+        <p className="text-6xl font-black p-5 text-white">My projects</p>
+        <div className=" text-white">
+          <div className="rounded-2xl mx-5 px-5">
+            {/* <p className="text-2xl font-bold italic">Experience</p> */}
+            <div className="sm:flex">
+              <div className="basis-1/5 m-5 bg-green-900 text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/kalpaviruksha.png" height={150} width={150}/>
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">Kalpaviruksha</p>           
+              </div>
+              <div className="basis-1/5 m-5 bg-blue-900 text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/projectdevs.png" height={150} width={150} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">Project Devs</p>           
+              </div>
+              <div className="basis-1/5 m-5 bg-gray-200 text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/mrdood.png" height={150} width={150} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">MrDood</p>           
+              </div>
+              <div className="basis-1/5 m-5 bg-green-300 text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/aerconnect.png" height={150} width={150} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">Aer Connect</p>           
+              </div>
+              <div className="basis-1/5 m-5 bg-white text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/college.png" height={150} width={150} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">30+ College projects</p>           
+              </div>              
+            </div>
+            <div className="sm:flex">
+              <div className="basis-1/5 m-5 bg-black text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/scalpy.png" height={150} width={150} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">Scalpy</p>           
+              </div>
+              <div className="basis-1/5 m-5 bg-purple-500 text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/madebysundays.png" height={150} width={150} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">Made By Sundays</p>           
+              </div>
+              <div className="basis-1/5 m-5 bg-blue-500 text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/ripplerewards.png" height={120} width={120} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">Ripple Rewards</p>           
+              </div>
+              <div className="basis-1/5 m-5 bg-green-400 text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/ipoport.ico" height={150} width={150} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">IPO Port</p>           
+              </div>
+              <div className="basis-1/5 m-5 bg-black text-black rounded-sm shadow-lg p-5">   
+                <div className="h-[25vh] place-content-center justify-items-center">
+                  <Image src="/qeuto.ico" height={150} width={150} />
+                </div>
+                <p className="font-bold p-2 bg-yellow-300">Qeuto Lifts</p>           
+              </div>              
             </div>
           </div>
         </div>
@@ -409,9 +526,9 @@ export default function Home() {
       
         {/* <Image src={`/intro.jpg`} width={100} height={100}/> */}
 
-        <div className="bg-blue-700 p-5 sm:flex">
+        <div className="p-5 sm:flex">
 
-          <div className="basis-1/3 bg-white text-black rounded-2xl m-2 p-5">
+          <div className="basis-1/3 bg-yellow-300 text-black rounded-2xl m-2 p-5">
             <div className="mx-5 rounded-full place-content-center h-[7vh] cursor-pointer px-5">
               <div className="text">
                 <div className="flex">
@@ -457,7 +574,7 @@ export default function Home() {
               </div>
             </div>
           </div> */}
-          <div className="basis-1/3 bg-white rounded-2xl m-2 p-5">
+          <div className="basis-1/3 bg-yellow-300 rounded-2xl m-2 p-5">
             <div className="mx-5 rounded-full place-content-center h-[7vh] cursor-pointer px-5 text-black">
               <div className="text">
                 <div className="flex">
@@ -472,7 +589,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="basis-1/3 bg-white rounded-2xl m-2 p-5">
+          <div className="basis-1/3 bg-yellow-300 rounded-2xl m-2 p-5">
             <div className="mx-5 rounded-full place-content-center h-[7vh] cursor-pointer px-5 text-black">
               <div className="text">
                 <div className="flex">

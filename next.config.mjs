@@ -8,7 +8,9 @@ const nextConfig = {
           'upload.wikimedia.org',
           'static.wixstatic.com',
           'projectdevs.web.app',
-          'media.licdn.com'
+          'media.licdn.com',
+          'img.freepik.com',
+          'static.vecteezy.com'
         ],
       },
 };
