@@ -107,12 +107,12 @@ export default function Home() {
       <div className="pt-5 mt-5 px-5 mx-5">
         <button onClick={()=>router.push('/')} className="p-5 mx-5 bg-blue-700 rounded-lg font-bold text-white">Back</button>
       </div>
-      <p className="text-5xl font-bold text-center">
+      <p className="pt-5 text-4xl sm:text-5xl font-bold text-center">
         {project}
       </p>
       <div className="p-5 justify-items-center">
         <div className="p-5 m-5 border-2 border-blue-700 w-[85vw]">
-          <Image src={`/webpages/${params?.id}/${imageNumber}.jpg`} height={1000} width={1000} className="h-[80vh] w-[85vw]" />
+          <Image src={`/webpages/${params?.id}/${imageNumber}.jpg`} height={1000} width={1000} className="sm:h-[80vh] w-[85vw]" />
           <div className="justify-items-between">
             <button className={`p-2 rounded m-2 ${imageNumber==1 ? `bg-gray-500` : `bg-yellow-300`}`} onClick={()=>imageChange('previous')} disabled={imageNumber==1 ? true : false}>Previous</button>
             <button className={`p-2 rounded m-2 ${imageNumber==maxImageNumber ? `bg-gray-500` : `bg-yellow-300`}`} onClick={()=>imageChange('next')}  disabled={imageNumber==maxImageNumber ? true : false}>Next</button>
