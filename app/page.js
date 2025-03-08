@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {
   Card,
   CardContent,
@@ -16,15 +16,6 @@ import { useRouter } from "next/navigation";
 export default function Home() {
 
   const router = useRouter()
-
-  const [capital, setCapital] = useState(0)
-  const [ltp, setLtp] = useState(0)
-  const [takeProfit, setTakeProfit] = useState(2)
-  const [stopLoss, setStopLoss] = useState(1)
-  const [target, setTarget] = useState(0)
-  const [quantity, setQuantity] = useState(0)
-  const [profit, setProfit] = useState(0)
-
 
 
   return (
@@ -395,11 +386,11 @@ export default function Home() {
                     </div>
                     <div className="bg-blue-700 rounded-lg text-white flex my-2">
                       <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
-                      <p className="text-sm p-2">I9 Options is a USA based Option trading platform built for TechOreo, Cyber-Security & hosting Company</p>
+                      <p className="text-sm p-2">I9 Options is a USA based Option trading platform built for TechOreo</p>
                     </div>
                     <div className="bg-blue-700 rounded-lg text-white flex my-2">
                       <Image src="https://static.vecteezy.com/system/resources/thumbnails/019/617/676/small_2x/gold-star-symbol-png.png" width={60} height={50} className="basis-1/6 p-2" />
-                      <p className="text-sm p-2">Digital marketing for Numeric Gamers, an online video gaming content provider available in Youtube, Blogger, Instagram</p>
+                      <p className="text-sm p-2">Digital marketing for Numeric Gamers</p>
                     </div>
                   </div>
                 </div>
@@ -417,15 +408,15 @@ export default function Home() {
                     <p className="mt-5 mb-2 font-bold">Achievements :</p>
                     <div className="bg-blue-700 rounded-lg text-white flex my-2">
                       <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
-                      <p className="text-sm p-2">‘Shining Star’ award for Developing and enhancing SPAN Project Management SAAS product - Solo</p>
+                      <p className="text-sm p-2">‘Shining Star’ award for Developing SPAN Project Management SAAS</p>
                     </div>
                     <div className="bg-blue-700 rounded-lg text-white flex my-2">
                       <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
-                      <p className="text-sm p-2">Awarded with ‘Spot Award’ for implementing the AWS services in production server within a day</p>
+                      <p className="text-sm p-2">‘Spot Award’ for implementing the AWS services in production by 8 hrs</p>
                     </div>
                     <div className="bg-blue-700 rounded-lg text-white flex my-2">
                       <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
-                      <p className="text-sm p-2">Awarded with ‘Best team of the month’ for the TaxBandits BOIR product</p>
+                      <p className="text-sm p-2">‘Best team of the month’ award for the TaxBandits BOIR product</p>
                     </div>
                     <div className="bg-blue-700 rounded-lg text-white flex my-2">
                       <Image src="https://static.vecteezy.com/system/resources/thumbnails/032/999/982/small/realistic-golden-trophy-ai-generative-free-png.png" width={60} height={50} className="basis-1/6 p-2" />
@@ -447,37 +438,43 @@ export default function Home() {
 
       {/* My projects */}
 
+      {/* <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4">
+          <div className="bg-yellow-300">Modal</div>
+        </div>
+      </div> */}
+
       <div className="sm:h-[100vh] bg-blue-700">
         <p className="text-6xl font-black p-5 text-white">My projects</p>
         <div className=" text-white">
           <div className="rounded-2xl mx-5 px-5">
             {/* <p className="text-2xl font-bold italic">Experience</p> */}
             <div className="sm:flex">
-              <div className="basis-1/5 m-5 bg-green-900 text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/kalpaviruksha')} className="basis-1/5 cursor-pointer m-5 bg-green-900 text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/kalpaviruksha.png" height={150} width={150}/>
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">Kalpaviruksha</p>           
               </div>
-              <div className="basis-1/5 m-5 bg-blue-900 text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/projectDevs')} className="basis-1/5 cursor-pointer m-5 bg-blue-900 text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/projectdevs.png" height={150} width={150} />
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">Project Devs</p>           
               </div>
-              <div className="basis-1/5 m-5 bg-gray-200 text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/mrDood')} className="basis-1/5 cursor-pointer m-5 bg-gray-200 text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/mrdood.png" height={150} width={150} />
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">MrDood</p>           
               </div>
-              <div className="basis-1/5 m-5 bg-green-300 text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/aerConnect')} className="basis-1/5 cursor-pointer m-5 bg-green-300 text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/aerconnect.png" height={150} width={150} />
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">Aer Connect</p>           
               </div>
-              <div className="basis-1/5 m-5 bg-white text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/collegeProjects')} className="basis-1/5 cursor-pointer m-5 bg-white text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/college.png" height={150} width={150} />
                 </div>
@@ -485,36 +482,36 @@ export default function Home() {
               </div>              
             </div>
             <div className="sm:flex">
-              <div className="basis-1/5 m-5 bg-black text-black rounded-sm shadow-lg p-5">   
+              <div  onClick={()=>router.push('/portfolio/scalpy')} className="basis-1/5 cursor-pointer m-5 bg-black text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/scalpy.png" height={150} width={150} />
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">Scalpy</p>           
               </div>
-              <div className="basis-1/5 m-5 bg-purple-500 text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/madeBySundays')} className="basis-1/5 cursor-pointer m-5 bg-purple-500 text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/madebysundays.png" height={150} width={150} />
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">Made By Sundays</p>           
               </div>
-              <div className="basis-1/5 m-5 bg-blue-500 text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/rippleRewards')} className="basis-1/5 cursor-pointer m-5 bg-blue-500 text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/ripplerewards.png" height={120} width={120} />
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">Ripple Rewards</p>           
               </div>
-              <div className="basis-1/5 m-5 bg-green-400 text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/ipoPort')} className="basis-1/5 cursor-pointer m-5 bg-green-400 text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/ipoport.ico" height={150} width={150} />
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">IPO Port</p>           
               </div>
-              <div className="basis-1/5 m-5 bg-black text-black rounded-sm shadow-lg p-5">   
+              <div onClick={()=>router.push('/portfolio/qeutoLifts')} className="basis-1/5 cursor-pointer m-5 bg-black text-black rounded-sm shadow-lg p-5">   
                 <div className="h-[25vh] place-content-center justify-items-center">
                   <Image src="/qeuto.ico" height={150} width={150} />
                 </div>
                 <p className="font-bold p-2 bg-yellow-300">Qeuto Lifts</p>           
-              </div>              
+              </div>
             </div>
           </div>
         </div>
@@ -612,15 +609,15 @@ export default function Home() {
 
       {/* Footer  */}
       
-      <div>
+      {/* <div>
 
         <div className={`sm:h-[4vh] flex place-content-center bg-black bg-opacity-80`}>
 
-          <p className="text-white text-xs py-2">@ Suresh Kumar M, 2025</p>
+          <p className="text-white text-xs py-2">Suresh Kumar M</p>
 
         </div>
 
-      </div>
+      </div> */}
 
     </div>
   );
